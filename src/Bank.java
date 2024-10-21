@@ -1,15 +1,20 @@
 public class Bank {
-    public Bankacc accounts;
+    Bankacc acc;
+    
     public String name;
     public int code;
-    public void deposit(int code, int amount) {
-        if (accounts.getNumber() == code) {
-            accounts.add(amount);
+    public void deposit(int cod, int amount) {
+        if (acc.number != cod) {
+            System.out.println("Bad pin");
+        } else {
+            acc.add(amount);
         }
     }
-    public void withdraw(int code, int amount) {
-        if (accounts.getNumber() == code) {
-            accounts.substruct(amount);
+    public void withdraw(int cod, int amount) {
+        if (acc.number != cod) {
+            System.out.println("Bad pin");
+        } else {
+            acc.add(amount);
         }
     }
 }
